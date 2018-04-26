@@ -1,19 +1,11 @@
 :root {
   --header-height: 80px;
 }
-*{
+* {
   box-sizing: border-box;
 }
 html, body {
   margin: 0;
-}
-
-a{
-    text-decoration: none;
-}
-
-ul{
-    list-style-type: none;
 }
 .car {
   border: 1px solid #888888;
@@ -30,7 +22,7 @@ ul{
   width: 100vw;
   height: var(--header-height);
   top: 0;
-  left: 0;
+  left:0;
 }
 .appbar, .menu {
   background: teal;

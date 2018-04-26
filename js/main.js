@@ -9,24 +9,17 @@ function fetchUsedCars(){
   let urlParams = new URLSearchParams(window.location.search);
 
   let catid = urlParams.get("category");
-  let endpoint = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/volunteering?_embed&per_page=2&page="+page
+  let endpoint = "http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/venue?_embed&per_page=2&page="+page
   if(catid){ // DRY
-    endpoint = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/volunteering?_embed&per_page=2&page="+page + "&categories="+catid
+    endpoint = "http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/venue?_embed&per_page=2&page="+page + "&categories="+catid
   }
 
-  let endopoint2 = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/about?_embed&per_page=2&page="+page
-  if(catid){ // DRY
-    endpoint2 = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/about?_embed&per_page=2&page="+page + "&categories="+catid
-  }
 
 
     fetch(endpoint)
       .then(e => e.json())
       .then(showCars);
 
-    fetch(endpoint2)
-        .then(e => e.json())
-        .then(showCars)
 
 }
 

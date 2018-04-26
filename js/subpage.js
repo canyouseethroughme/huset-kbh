@@ -4,7 +4,7 @@ let id = urlParams.get("id");
 console.log("i want to get article: " + id);
 
 
-fetch("http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/volunteering/"+id)
+fetch("http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/venue/"+id)
   .then(e=>e.json())
   .then(showSinglePost)
 

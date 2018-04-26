@@ -13,7 +13,7 @@ window.addEventListener('load',()=>{
     menu.classList.toggle("hidden");
   }
 
-  fetch("http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/categories")
+  fetch("http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/categories")
     .then(e=>e.json())
     .then(buildMenu)
 
