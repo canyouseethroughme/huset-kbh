@@ -4,25 +4,46 @@
 * {
   box-sizing: border-box;
 }
+
+
+
 html, body {
   margin: 0;
+	background-color: #eefefb;
 }
 .car {
-  border: 1px solid #888888;
-  padding: 1.5em;
+  padding: 0em;
   margin: 1em;
-  box-shadow: 2px 3px rgba(0,0,0,0.3);
+  background-color: #ffffff;
 }
 .car .color {
   width: 100px;
   height: 100px;
   background: yellow;
 }
+
+header{
+	z-index: 200;
+}
+
+header .logo{
+	width: 150px;
+	height: auto;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.menuDiv{
+	position: absolute;
+	right: 40px;
+	top: 20px;
+}
+
 .appbar {
   width: 100vw;
   height: var(--header-height);
   top: 0;
-  left:0;
+  left: 0;
 }
 .appbar, .menu {
   background: teal;
@@ -35,6 +56,7 @@ html, body {
   width: 100vw;
   transition: all 0.3s 0.3s;
   color: white;
+	z-index: 200;
 }
 .menu.hidden {
   transform: translateX(-100vw);
@@ -43,6 +65,95 @@ html, body {
   margin: 1em;
   margin-top: var(--header-height);
 }
+.schedules{
+	position: relative;
+}
+
+.car h1{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 30px;
+	color: #2d0941;
+}
+
+.date{
+	position: absolute;
+	top: -30px;
+	left: 0;
+	color: #ffffff;
+	font-size: 30px;
+	background-color: rgba(1,1,1,.5);
+	padding: 5px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+
+
+.price{
+	position: absolute;
+	bottom: -20px;
+	color: #ffffff;
+	font-size: 25px;
+	background-color: rgba(1,1,1,.5);
+	padding: 2px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.hour{
+	position: absolute;
+	bottom: 20px;
+	color: #ffffff;
+	font-size: 20px;
+	background-color: rgba(1,1,1,.5);
+	padding: 2px;
+	font-family: 'Roboto', sans-serif thin;
+	font-weight: 100;
+}
+
+
+.descript{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 20px;
+	color: #2d0941;
+	padding-bottom: 20px;
+}
+article p{
+	text-align: center;
+}
+.readmore{
+	color: #2d0941;
+	border: 3px solid #62efce;
+	padding: 14px 25px;
+	text-decoration: none;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 25px;
+}
+
+.readmore:hover{
+	background-color: #62efce;
+}
+
+.menu ul{
+	margin-left: -40px;
+}
+
+.menu ul li{
+	list-style-type: none;
+	text-align: center;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	font-size: 30px;
+}
+
+.menu ul a{
+	text-decoration: none;
+	color: #ffffff;
+
+}
+
 .menuIcon {
   height: 30px;
   margin-top: 10px;
@@ -84,12 +195,16 @@ html, body {
   #carlist {
     grid-template-columns: 1fr 1fr;
   }
-
+	article p{
+	text-align: left;
+}
 }
 
 @media (min-width: 1300px)  {
   #carlist {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
+	article p{
+	text-align: left;
+}
 }

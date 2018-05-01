@@ -32,7 +32,11 @@ function showCars(data){
 function showSingleCar(aCar){
   let clone = template.cloneNode(true);
   clone.querySelector("h1").textContent = aCar.title.rendered;
-  clone.querySelector(".descript").innerHTML = aCar.content.rendered
+  clone.querySelector(".descript").innerHTML = aCar.content.rendered;
+	clone.querySelector(".price span").textContent = aCar.acf.price;
+	clone.querySelector(".hour span").textContent = aCar.acf.hour;
+	clone.querySelector(".date span").textContent = aCar.acf.date;
+
 
   if(aCar._embedded["wp:featuredmedia"]){//img is there
      clone.querySelector("img").setAttribute("src", aCar._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
