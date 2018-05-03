@@ -9,7 +9,7 @@
 
 html, body {
   margin: 0;
-	background-color: #eefefb;
+	background-color: #c7d9e8;
 }
 .car {
   padding: 0em;
@@ -46,7 +46,7 @@ header .logo{
   left: 0;
 }
 .appbar, .menu {
-  background: teal;
+  background: #c29f6d;
   padding: 1em;
   position: fixed;
 }
@@ -72,7 +72,12 @@ header .logo{
 .car h1{
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 30px;
-	color: #2d0941;
+	color: #3b566d;
+	text-align: center;
+}
+
+.car label{
+	text-align: left;
 }
 
 .date{
@@ -115,9 +120,13 @@ header .logo{
 .descript{
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 20px;
-	color: #2d0941;
+	color: #3b566d;
 	padding-bottom: 20px;
+	text-align: center;
 }
+
+.descript h1{ text-align: center;}
+
 article p{
 	text-align: center;
 }
@@ -128,6 +137,7 @@ article p{
 	text-decoration: none;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 25px;
+	opacity: 0;
 }
 
 .readmore:hover{
@@ -195,16 +205,12 @@ article p{
   #carlist {
     grid-template-columns: 1fr 1fr;
   }
-	article p{
-	text-align: left;
-}
+
 }
 
 @media (min-width: 1300px)  {
   #carlist {
     grid-template-columns: 1fr 1fr 1fr;
   }
-	article p{
-	text-align: left;
-}
+
 }

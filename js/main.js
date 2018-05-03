@@ -9,17 +9,14 @@ function fetchUsedCars(){
   let urlParams = new URLSearchParams(window.location.search);
 
   let catid = urlParams.get("category");
-  let endpoint = "http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/venue?_embed&per_page=2&page="+page
+  let endpoint = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/volunteering?_embed&per_page=2&page="+page
   if(catid){ // DRY
-    endpoint = "http://www.mrbertea.com/wordpress/theme7/wp-json/wp/v2/venue?_embed&per_page=2&page="+page + "&categories="+catid
+    endpoint = "http://canyouseethrough.me/kea2/theme7/wordpress/wp-json/wp/v2/volunteering?_embed&per_page=2&page="+page + "&categories="+catid
   }
-
-
 
     fetch(endpoint)
       .then(e => e.json())
       .then(showCars);
-
 
 }
 
@@ -32,11 +29,7 @@ function showCars(data){
 function showSingleCar(aCar){
   let clone = template.cloneNode(true);
   clone.querySelector("h1").textContent = aCar.title.rendered;
-  clone.querySelector(".descript").innerHTML = aCar.content.rendered;
-	clone.querySelector(".price span").textContent = aCar.acf.price;
-	clone.querySelector(".hour span").textContent = aCar.acf.hour;
-	clone.querySelector(".date span").textContent = aCar.acf.date;
-
+  clone.querySelector(".descript").innerHTML = aCar.content.rendered
 
   if(aCar._embedded["wp:featuredmedia"]){//img is there
      clone.querySelector("img").setAttribute("src", aCar._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
